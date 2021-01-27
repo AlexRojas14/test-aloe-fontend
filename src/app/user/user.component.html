@@ -1,0 +1,39 @@
+<div style="padding: 50px;" class="card card-shadow">
+    <div class="card-header rounded bg-primary text-white">
+        <span class="mb-0 h2">
+            Lista de Usuario
+        </span>
+        <add-user-modal></add-user-modal>
+    </div>
+    <div class="card-body">
+        <div class="card table-responsive p-3 mb-5 bg-white rounded">
+            <div class="input-group mb-20">
+            </div>
+            <table class="table table-striped-even-light-blue">
+              <thead class="thead-primary">
+                <tr>
+                  <th class="no-border">Nombre</th>
+                  <th class="no-border">Género</th>
+                  <th class="no-border">Cédula</th>
+                  <th class="no-border">Fecha de nacimiento</th>
+                  <th class="no-border">Departamento</th>
+                  <th class="no-border">Cargo</th>
+                  <th class="no-border">Supervisor Inmediato</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <th>{{ user.Name }} - {{ LastName }}</th>
+                  <td>{{ user.Sex }}</td>
+                  <td>{{ user.Identification }}</td>
+                  <td>{{ user.BirthDate }}</td>
+                  <td>{{ user.DepartmentCodeAndName }}</td>
+                  <td>{{ user.Position }}</td>
+                  <td>{{ user.ImmediateSupervisor }}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+  

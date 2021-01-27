@@ -1,0 +1,89 @@
+<button (click)="openModal()" data-toggle="tooltip"
+        data-placement="top" title="Agregar Nuevo Usuario"
+        class="btn bg-white" style="float: right;">
+  Agregar Usuario
+</button>
+
+<ng-template #ContentModal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <div class="modal-title w-100 text-center mb-0">
+      <i class="fas fa-plus-square fa-3x pull-left text-primary"></i>
+      <span class="h2">Agregar Usuario</span>
+    </div>
+    <button type='button' class='close' data-dismiss='modal' aria-label='Close' (click)="d('Cross click')">
+      <span aria-hidden='true'>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body padd-15">
+    <div class="card card-shadow"
+         style="border: 1px solid; border-color: #a3d0ff;">
+      <div class="card-header pv-5"
+           style="background: #5cabff;">
+        <i class="fas fa-bars text-white"></i>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Nombre<span class="text-danger">*</span></label>
+              <input type="text" id="name" class="form-control" [(ngModel)]="name">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Apellido<span class="text-danger">*</span></label>
+              <input type="text" id="lastName" class="form-control" [(ngModel)]="lastName">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Genero<span class="text-danger">*</span></label>
+              <input type="text" id="sex" class="form-control" [(ngModel)]="sex">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Cedula<span class="text-danger">*</span></label>
+              <input type="text" id="identification" class="form-control" [(ngModel)]="identification">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Fecha de Nacimiento<span class="text-danger">*</span></label>
+              <input type="text" id="birthDate" class="form-control" [(ngModel)]="birthDate">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Departamento<span class="text-danger">*</span></label>
+              <input type="text" id="department" class="form-control" [(ngModel)]="department">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Cargo<span class="text-danger">*</span></label>
+              <input type="text" id="Position" class="form-control" [(ngModel)]="Position">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="name">Supervisor inmediato<span class="text-danger">*</span></label>
+              <input type="text" id="ImmediateSupervisor" class="form-control" [(ngModel)]="ImmediateSupervisor">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger mr-20"
+            (click)="c('Close click')">
+      <i class="fas fa-ban fa-fw"></i> Cerrar
+    </button>
+    <button type="button" class="btn btn-success"
+            (click)="addSupplier()">
+      <i class="fas fa-plus-square fa-fw"></i> Agregar
+    </button>
+  </div>
+</ng-template>
